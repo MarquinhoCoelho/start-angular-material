@@ -1,0 +1,29 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "name": "Livros",
+      "description": "Todos os Livros"
+    },
+    {
+      "id": 2,
+      "name": "Jogos",
+      "description": "Todos os Jogos"
+    },
+    {
+      "id": 3,
+      "name": "Periféricos",
+      "description": "Todos os Periféricos"
+    },
+    {
+      "name": "Eletro Domésticos",
+      "description": "Todos os Eletro Domésticos",
+      "id": 4
+    },
+    {
+      "name": "novo",
+      "description": "Todos os trinta",
+      "id": 5
+    }
+  ]
+}
