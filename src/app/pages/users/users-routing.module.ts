@@ -1,10 +1,10 @@
+import { categoryComponent } from './category/category.component';
 import { AuthGuard } from './../../guards/auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UsersComponent } from './users.component';
 
 const routes: Routes = [
-  { path: '', component: UsersComponent , canActivate: [AuthGuard]}
+  { path: 'category', component: categoryComponent , canActivate: [AuthGuard]}
 ];
 
 @NgModule({

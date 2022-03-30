@@ -1,5 +1,5 @@
+import { Category } from '../../app/models/category.model';
 import { Observable } from 'rxjs';
-import { Categoria } from './../../models/categoria.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -8,9 +8,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 @Injectable({
   providedIn: 'root'
 })
-export class CategoriaService {
+export class categoryService {
 
-  baseUrl: string = 'http://localhost:3001/categorias';
+  baseUrl: string = 'http://localhost:3001/categorys';
 
   constructor(
     private http: HttpClient,
@@ -21,16 +21,16 @@ export class CategoriaService {
     this.snackBar.open(msg, 'X', {
       duration: 3000,
       horizontalPosition: "right",
-      verticalPosition: "top"
+      verticalPosition: "bottom"
     })
   }
 
-  create(categoria: Categoria): Observable<Categoria> {
-    return this.http.post<Categoria>(this.baseUrl, categoria);
+  create(category: Category): Observable<Category> {
+    return this.http.post<Category>(this.baseUrl, category);
   }
 
-  read(): Observable<Categoria[]> {
-    return this.http.get<Categoria[]>(this.baseUrl)
+  read(): Observable<Category[]> {
+    return this.http.get<Category[]>(this.baseUrl)
   }
 
 
