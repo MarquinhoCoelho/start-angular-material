@@ -1,5 +1,5 @@
 import { categoryComponent } from './category/category.component';
-import { AuthGuard } from './../../guards/auth.guard';
+import { AuthGuard } from '../../shareds/guards/auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
