@@ -1,5 +1,7 @@
 
 <div class="mat-elevation-z8">
+  <button mat-button color="accent" type="button" (click)="get()">GET</button>
+  <button mat-raised-button color="accent" color="accent" type="button" (click)="post()">POST</button>
 
   <table style="width: 100%;" [dataSource]="categorys" mat-table>
 
@@ -19,12 +21,16 @@
     </ng-container>
 
     <ng-container matColumnDef="actions">
-      <th mat-header-cell *matHeaderCellDef>
-        <button (click)="get()"> GET </button>
-        <button (click)="post()"> POST </button>
+      <th class="mat-header" mat-header-cell *matHeaderCellDef>
+        Ações
       </th>
       <td mat-cell *matCellDef="let row">
-
+        <a class="edit" href="#">
+          <i class="material-icons">edit</i>
+        </a>
+        <a class="delete" href="#">
+          <i class="material-icons">delete</i>
+        </a>
       </td>
     </ng-container>
 

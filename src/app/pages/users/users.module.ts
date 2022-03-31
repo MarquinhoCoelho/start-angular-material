@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { UsersRoutingModule } from './users-routing.module';
 
 import { MatTableModule } from '@angular/material/table';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { MatTableModule } from '@angular/material/table';
     CommonModule,
     UsersRoutingModule,
     MatTableModule,
+    MatButtonModule
   ]
 })
 export class UsersModule { }

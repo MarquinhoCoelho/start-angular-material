@@ -10,7 +10,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class categoryService {
 
-  baseUrl: string = 'http://localhost:3001/categorys';
+  baseUrl: string = 'http://localhost:3001';
 
   constructor(
     private http: HttpClient,
@@ -26,11 +26,13 @@ export class categoryService {
   }
 
   create(category: Category): Observable<Category> {
-    return this.http.post<Category>(this.baseUrl, category);
+    const url = `${this.baseUrl}/categorys`
+    return this.http.post<Category>(url, category);
   }
 
   read(): Observable<Category[]> {
-    return this.http.get<Category[]>(this.baseUrl)
+    const url = `${this.baseUrl}/categorys`
+    return this.http.get<Category[]>(url)
   }
 
 
